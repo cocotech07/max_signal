@@ -18,7 +18,7 @@ const User = () => {
                     <div className="w-full h-[calc(100%-5rem)] overflow-y-auto scrollbar-none scrollbar-thumb-[#003049] scrollbar-track-[#042836] scrollbar-thin ">
                         <div className="w-full h-max flex flex-col ">
                             <div className="w-full h-max flex flex-col gap-2 p-5 border-b border-b-gray-600">
-                                <div className="w-full h-max rounded bg-[#f36033] p-3 flex flex-col gap-2">
+                                <div className="w-full h-max rounded bg-gradient-to-r from-[#e52e71] to-[#ff8a00] p-3 flex flex-col gap-2">
                                     <div className="w-full h-max flex justify-between">
                                         <p className="text-2xl font-bold text-white">
                                             Account Balance
@@ -267,7 +267,7 @@ const User = () => {
                     </div>
                 </div>
                 <div className="w-[73%] phone:w-full h-screen bg-[#042836] ">
-                    <div className="w-full h-20 flex items-center justify-between border-b border-b-gray-600 px-5">
+                    <div className="w-full h-20 flex items-center justify-between bg-[#003049] border-b border-b-gray-600 px-5">
                         <div className="w-max h-max transition-all duration-500 hidden phone:flex items-center justify-center p-2 px-3 cursor-pointer hover:bg-[#e6306f] text-white rounded bg-[#535a94]">
                             <FaArrowRight />
                         </div>
@@ -284,7 +284,7 @@ const User = () => {
                         </div>
                     </div>
                     <div className="w-full h-[calc(100%-5rem)] overflow-y-auto scrollbar-none scrollbar-thumb-[#003049] scrollbar-track-[#042836] scrollbar-thin ">
-                        <div className="w-full h-max flex flex-col p-5 text-white">
+                        <div className="w-full h-max flex flex-col p-5 ">
                             <Outlet />
                         </div>
                     </div>
