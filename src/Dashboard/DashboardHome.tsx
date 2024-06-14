@@ -3,6 +3,7 @@ import firstprize from "../assets/firstPrizeicon.svg";
 import {LuClipboardList} from "react-icons/lu";
 
 const DashboardHome = () => {
+    const testData = [1, 2, 3, 4, 5];
     return (
         <div className="w-full h-max flex flex-col gap-8 text-[rgba(255,255,255,0.8)] mb-16">
             <div className="w-full h-max phone:flex phone:justify-center">
@@ -90,110 +91,59 @@ const DashboardHome = () => {
                             <div className="w-40 h-max">GATEWAY</div>
                         </div>
                         <div className="w-full h-max flex flex-col rounded-b border-b border-x border-x-gray-600 border-b-gray-600">
-                            <>
-                                <div className="w-full h-20 bg-[#003049] hover:bg-[#1c3247] flex items-center rounded-b text-sm text-white font-bold px-2 ">
-                                    <div className="w-80 h-max flex gap-4">
-                                        <div className="w-11 h-11 rounded-full bg-[#3a4d7e] flex items-center justify-center text-[#fff]">
-                                            <LuClipboardList size={18} />
-                                        </div>
-                                        <div className="w-max h-max flex flex-col gap-1">
-                                            <p className="text-base font-bold text-white">
-                                                Deposit With BTC
-                                            </p>
-                                            <p className=" font-semibold text-gray-400 text-xs">
-                                                Jun 13 2024 10:06
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="w-52 h-max">
-                                        TRXJZUVWBXW62
-                                    </div>
-                                    <div className="w-56 h-max">
-                                        <p className="w-max h-max px-4 py-[2px] bg-[#e73667] rounded-full text-xs">
-                                            Manual Deposit
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max text-[rgb(42,157,143)]">
-                                        +2000.00 USD
-                                    </div>
-                                    <div className="w-20 h-max">0 USD</div>
-                                    <div className="w-28 h-max">
-                                        {" "}
-                                        <p className="w-max h-max px-3 py-[2px] bg-[#ffc300] text-black rounded-full text-xs">
-                                            Pending
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max">BTC</div>
+                            {testData.length > 0 ? (
+                                <div className="w-full h-20 flex items-center justify-center">
+                                    <p>No Transaction Yet</p>
                                 </div>
-                                <div className="w-full h-20 bg-[#003049] hover:bg-[#1c3247] flex items-center rounded-b text-sm text-white font-bold px-2 ">
-                                    <div className="w-80 h-max flex gap-4">
-                                        <div className="w-11 h-11 rounded-full bg-[#3a4d7e] flex items-center justify-center text-[#fff]">
-                                            <LuClipboardList size={18} />
+                            ) : (
+                                testData.map((index) => (
+                                    <>
+                                        <div
+                                            className="w-full h-20 bg-[#003049] hover:bg-[#1c3247] flex items-center rounded-b text-sm text-white font-bold px-2 "
+                                            key={index}
+                                        >
+                                            <div className="w-80 h-max flex gap-4">
+                                                <div className="w-11 h-11 rounded-full bg-[#3a4d7e] flex items-center justify-center text-[#fff]">
+                                                    <LuClipboardList
+                                                        size={18}
+                                                    />
+                                                </div>
+                                                <div className="w-max h-max flex flex-col gap-1">
+                                                    <p className="text-base font-bold text-white">
+                                                        Deposit With BTC
+                                                    </p>
+                                                    <p className=" font-semibold text-gray-400 text-xs">
+                                                        Jun 13 2024 10:06
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="w-52 h-max">
+                                                TRXJZUVWBXW62
+                                            </div>
+                                            <div className="w-56 h-max">
+                                                <p className="w-max h-max px-4 py-[2px] bg-[#e73667] rounded-full text-xs">
+                                                    Manual Deposit
+                                                </p>
+                                            </div>
+                                            <div className="w-40 h-max text-[rgb(42,157,143)]">
+                                                +2000.00 USD
+                                            </div>
+                                            <div className="w-20 h-max">
+                                                0 USD
+                                            </div>
+                                            <div className="w-28 h-max">
+                                                {" "}
+                                                <p className="w-max h-max px-3 py-[2px] bg-[#ffc300] text-black rounded-full text-xs">
+                                                    Pending
+                                                </p>
+                                            </div>
+                                            <div className="w-40 h-max">
+                                                BTC
+                                            </div>
                                         </div>
-                                        <div className="w-max h-max flex flex-col gap-1">
-                                            <p className="text-base font-bold text-white">
-                                                Deposit With BTC
-                                            </p>
-                                            <p className=" font-semibold text-gray-400 text-xs">
-                                                Jun 13 2024 10:06
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="w-52 h-max">
-                                        TRXJZUVWBXW62
-                                    </div>
-                                    <div className="w-56 h-max">
-                                        <p className="w-max h-max px-4 py-[2px] bg-[#e73667] rounded-full text-xs">
-                                            Manual Deposit
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max text-[rgb(42,157,143)]">
-                                        +2000.00 USD
-                                    </div>
-                                    <div className="w-20 h-max">0 USD</div>
-                                    <div className="w-28 h-max">
-                                        {" "}
-                                        <p className="w-max h-max px-3 py-[2px] bg-[#ffc300] text-black rounded-full text-xs">
-                                            Pending
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max">BTC</div>
-                                </div>
-                                <div className="w-full h-20 bg-[#003049] hover:bg-[#1c3247] flex items-center rounded-b text-sm text-white font-bold px-2 ">
-                                    <div className="w-80 h-max flex gap-4">
-                                        <div className="w-11 h-11 rounded-full bg-[#3a4d7e] flex items-center justify-center text-[#fff]">
-                                            <LuClipboardList size={18} />
-                                        </div>
-                                        <div className="w-max h-max flex flex-col gap-1">
-                                            <p className="text-base font-bold text-white">
-                                                Deposit With BTC
-                                            </p>
-                                            <p className=" font-semibold text-gray-400 text-xs">
-                                                Jun 13 2024 10:06
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="w-52 h-max">
-                                        TRXJZUVWBXW62
-                                    </div>
-                                    <div className="w-56 h-max">
-                                        <p className="w-max h-max px-4 py-[2px] bg-[#e73667] rounded-full text-xs">
-                                            Manual Deposit
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max text-[rgb(42,157,143)]">
-                                        +2000.00 USD
-                                    </div>
-                                    <div className="w-20 h-max">0 USD</div>
-                                    <div className="w-28 h-max">
-                                        {" "}
-                                        <p className="w-max h-max px-3 py-[2px] bg-[#ffc300] text-black rounded-full text-xs">
-                                            Pending
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-max">BTC</div>
-                                </div>
-                            </>
+                                    </>
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,20 @@ import {NavLink} from "react-router-dom";
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 import {LuUser2} from "react-icons/lu";
 import {TiHomeOutline} from "react-icons/ti";
+// import {Drawer} from "antd";
+import {useState} from "react";
+// import {Drawer} from "antd";
 
 const User = () => {
+    const [sideBar, setSideBar] = useState<boolean>(false);
+
+    function openSideBar() {
+        setSideBar(true);
+    }
+    function closeSideBar() {
+        setSideBar(false);
+    }
+
     return (
         <>
             <div className="w-full h-max flex">
@@ -290,6 +302,7 @@ const User = () => {
                     </div>
                 </div>
             </div>
+            {/* <Drawer open={sideBar}></Drawer> */}
         </>
     );
 };
