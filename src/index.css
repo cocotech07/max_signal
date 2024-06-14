@@ -12,3 +12,12 @@
     right: -25px;
     top: -25px;
 }
+
+.ant-drawer-body {
+    padding: 0 !important;
+    z-index: 1 !important;
+}
+
+.ant-drawer-header {
+    display: none !important;
+}
