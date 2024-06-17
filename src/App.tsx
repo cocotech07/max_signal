@@ -5,7 +5,7 @@ import User from "./Dashboard/User";
 import DashboardHome from "./Dashboard/DashboardHome";
 import AdminRoute from "./Routes/AdminRoute";
 import Admin from "./Admin/Admin";
-import AdminHome from "./Admin/AdminHome";
+// import AdminHome from "./Admin/AdminHome";
 import Login from "./Auth/Login";
 import AllSchema from "./Dashboard/AllSchema";
 import SchemaLogs from "./Dashboard/SchemaLogs";
@@ -20,6 +20,8 @@ import WithdrawLog from "./Dashboard/WithdrawLog";
 import RankingBadge from "./Dashboard/RankingBadge";
 import Settings from "./Dashboard/Settings";
 import SupportTicket from "./Dashboard/SupportTicket";
+import Users from "./Admin/Users";
+import AdminTransactions from "./Admin/AdminTransactions";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -92,8 +94,12 @@ const App = () => {
             element: <AdminRoute element={<Admin />}></AdminRoute>,
             children: [
                 {
-                    path: "",
-                    element: <AdminHome />,
+                    path: "users",
+                    element: <Users />,
+                },
+                {
+                    path: "transactions",
+                    element: <AdminTransactions />,
                 },
             ],
         },
